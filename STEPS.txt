@@ -1,0 +1,3 @@
+- Create Game folder
+-Create html and js file
+-create canvas
