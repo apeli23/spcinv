@@ -1,0 +1,29 @@
+PROJECT SETUP
+- Create Game folder
+-Create html and js file
+-create canvas
+-get canvas context
+-set canvas width and height
+-remove page margin(set to 0)
+
+CREATE PLAYER 
+-Create player constructor method
+-create player draw method
+-add player image on webpage
+
+
+MOVE PLAYER
+
+-create update function  to update player velocity on x axis
+- create key constant to monitor key press
+- create event listenert that uses swithch to track key press and move player accordingly(key down, key up)
+- update player velocity mobvement in the animate method
+-update draw function to position player accordingly on game start and handle player rotation
+
+CREATE PROJECTILE
+
+- Create an projector class
+-Since projectile will be fired dynamically pass it through a constructor argument
+-set position velocity and radius of projectile
+-create draw function in projectile to determine how projectile looks like
+-
