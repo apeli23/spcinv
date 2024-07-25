@@ -16,8 +16,8 @@ MOVE PLAYER
 
 -create update function  to update player velocity on x axis
 - create key constant to monitor key press
-- create event listenert that uses swithch to track key press and move player accordingly(key down, key up)
-- update player velocity mobvement in the animate method
+- create event listener that uses switch to track key press and move player accordingly(key down, key up)
+- update player velocity movement in the animate method
 -update draw function to position player accordingly on game start and handle player rotation
 
 CREATE PROJECTILE
@@ -26,4 +26,24 @@ CREATE PROJECTILE
 -Since projectile will be fired dynamically pass it through a constructor argument
 -set position velocity and radius of projectile
 -create draw function in projectile to determine how projectile looks like
--
+-declare const projectiles(empty array)
+-update animate function to include projectile Movement
+-update keydown event listener to update projectiles array to cater 4 new projectiles when space key is fired
+
+CREATE INVADER
+- Include invader image in project
+- Use player class to create invader.
+- update image, remove rotation
+- update invader position and size
+
+CREATE AND MOVE GRIDS OF PLAYERS
+-Create a Grid class. It will have a constructor as well
+-Create an array named grid to store multiple grids
+-move invader into the constructor
+-create rows and columns to be occupied by invaders(I used for loop inside Grid class)
+-as you push invaders inside grid remember to adjust invader positioning
+-update invader velocity
+
+SPAWN GRID AT INTERVALS
+-let  frames = 0
+-have grid to respawn every 1000frames
