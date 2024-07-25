@@ -47,3 +47,10 @@ CREATE AND MOVE GRIDS OF PLAYERS
 SPAWN GRID AT INTERVALS
 -let  frames = 0
 -have grid to respawn every 1000frames
+
+
+SHOOT INVADER
+-this will be done within the grid. We will loop through each projectile for every invader
+-projectile should only remove an invader if the bottom of the projectile is more than the bottom of the invader
+
+ACCOUNT FOR NEW GRID WIDTH
