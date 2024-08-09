@@ -1,3 +1,4 @@
+const scoreEl = document.querySelector('#scoreEl');
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
@@ -283,6 +284,7 @@ let game = {
 	over: false,
 	active: true
 }
+let score = 0;
 
 for(let i = 1; i < 100; i++){
 		particles.push(
@@ -427,25 +429,14 @@ function animate(){
 						const projectileFound = projectiles.find((projectile2) => {
 							return projectile2 === projectile
 						})
+						// remove invader and projectile
 						if(invaderFound && projectileFound){
+							score +=10
+							scoreEl.innerHTML =score
 							createParticles({
 								object: invader,
 								fades : true
 							})
-							for(let i = 1; i  < 15; i++){
-							particles.push(new Particle ({
-								position: {
-									x: invader.position.x + invader.width / 2,
-									y: invader.position.y + invader.height / 2
-								},
-								velocity: {
-									x: (Math.random() - 0.5) * 2,
-									y: (Math.random() - 0.5) * 2
-								},
-								radius: Math.random() *3,
-								color:'#BAA0DE'
-							}))
-						}
 							grid.invaders.splice(i, 1)
 							projectiles.splice(j, 1)
 
@@ -459,6 +450,7 @@ function animate(){
 								grids.splice(gridIndex, 1)
 							}
 						}
+						
 					}, 0)
 				}
 			})
