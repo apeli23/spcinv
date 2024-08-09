@@ -506,7 +506,21 @@ addEventListener('keydown', ({key}) => {
 
 	}
 })
-
+addEventListener('mousedown', () => {
+	if(game.over) return
+	projectiles.push(
+		new Projectile({
+			position: {
+				x: player.position.x + player.width / 2,
+				y: player.position.y
+			},
+			velocity: {
+				x: 0,
+				y: -13
+			}
+		})
+	);
+});
 addEventListener('keyup', ({key}) => {
 	switch(key) {
 		case 'a':
